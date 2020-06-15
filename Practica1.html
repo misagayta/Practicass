@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+
+	</head>
+	<body  onload="chale();" >
+
+		
+		<script type="text/javascript">
+	 	  function chale (){
+        var numero=prompt("Ingrese la cantidad deseada de cajas a insertar");
+           if (numero<=8) {
+             var i=1;
+             while (i<=numero) {
+               document.write('<article id="caja" style="background-color: #10375c; color:#f3c623;width:70px; height:30px; float:left;margin-left:15px;" align="center">Caja'+i+'</article>');
+               i++;
+             }
+           }else {
+             var y=1;
+             while (y<=numero) {
+               document.write('<article id="caja" style="background-color:#f3c623; color:#10375c; margin-top:15px;" align="center">Caja'+i+'</article>');
+               y++;
+             }
+           }
+        }
+	 </script>	
+
+
+	</body>
+</html>

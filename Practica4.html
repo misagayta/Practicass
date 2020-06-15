@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>funcion operaciones</title>
+	</head>
+
+	<body>
+	 <textarea id="salida" col="10" rows="10"  ></textarea>
+	 <input type="buttom" value="Sumar" onclick="Sumar();">
+	 <input type="buttom" value="Restar" onclick="Restar();">
+	 <input type="buttom" value="Multiplicar" onclick="Multiplicar();">
+	 <input type="buttom" value="Dividir" onclick="Dividir();">
+
+	 <script type="text/javascript">
+	 	var n1=40; var n2=4;//type-botto, es para generear el botom al igual que las columnas, el "oneclick" es para realizar la operacion, es donde llama el metodo
+	 	//"salida" es llama en el apartado textarea  mediante la "id" que tiene
+	 	//documen... es como imprimir en pantalla y realiza la operacion, la cual se guarda en el metodo
+	 	function Sumar(){
+
+	 		document.getElementById("salida").innerHTML=n1+n2;//aqui se realiza la operacion suma y arroja el resultado en one click
+	 	}
+	 	function Restar(){
+
+	 		document.getElementById("salida").innerHTML=n1-n2;//aqui se realiza la operacion sresta y arroja el resultado en one click
+	 	}
+	 	function Multiplicar(){
+
+	 		document.getElementById("salida").innerHTML=n1*n2;//aqui se realiza la operacion Multiplicacion y arroja el resultado en one click
+	 	}
+	 	function Dividir(){
+
+	 		document.getElementById("salida").innerHTML=n1/n2;//aqui se realiza la operacion Dividir y arroja el resultado en one click
+	 	}
+	 	
+	 </script>
+
+	</body>
+</html>

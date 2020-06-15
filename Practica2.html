@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    	<meta charset="utf-8">
+    	<title></title>
+    </head>
+
+    <body onload="Eleccion();" style="background: rgba(183,222,237,1);
+background: -moz-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(19,32,117,1) 45%, rgba(183,222,237,1) 86%, rgba(183,222,237,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(183,222,237,1)), color-stop(45%, rgba(19,32,117,1)), color-stop(86%, rgba(183,222,237,1)), color-stop(100%, rgba(183,222,237,1)));
+background: -webkit-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(19,32,117,1) 45%, rgba(183,222,237,1) 86%, rgba(183,222,237,1) 100%);
+background: -o-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(19,32,117,1) 45%, rgba(183,222,237,1) 86%, rgba(183,222,237,1) 100%);
+background: -ms-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(19,32,117,1) 45%, rgba(183,222,237,1) 86%, rgba(183,222,237,1) 100%);
+background: linear-gradient(to right, rgba(183,222,237,1) 0%, rgba(19,32,117,1) 45%, rgba(183,222,237,1) 86%, rgba(183,222,237,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed', GradientType=1 );">
+         
+    	   <script type="text/javascript">
+
+         function Eleccion(){
+          var dia=prompt("Ingrese su secccion: \n 1.-Norte \n 2.-Sur \n 3.-Centro");
+             var day="";
+
+            switch(dia) {
+              
+              case '1':
+                day = "Dio un voto para la region: "+dia+".- Norte";
+                break;
+
+              case '2':
+                day = "Dio un voto para el sur";
+                break;
+
+              case '3':
+                 day = "Dio un voto para el centro";
+                 break;
+
+              default:
+                  text = "Tiene que ser su seccion";
+
+
+            } alert(day);
+         }
+
+
+
+        
+       
+
+    	 	  
+    	 </script>	
+        
+    </body>
+
+</html>
