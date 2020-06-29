@@ -10,7 +10,7 @@
 body{
 	background-image: url('Back.jpg');
 	width: 110%;
-	height: 100vh;
+	height: 150;
 	 background-repeat: no-repeat;
 	 background-position:top;
 	 --webkit-scrollbar {
