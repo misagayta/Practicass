@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Vincular o crear</title>
+	</head>
+	<body>
+		<header id="encabezado">
+			<ol id="lista">
+				<li>opcion 1</li>
+				<li>opcion 2</li>
+				<li>opcion 3</li>
+			</ol>
+			<button type="button" onclick="agregar();" >Agregar opccion</button>
+
+		</header>
+
+		<script type="text/javascript">
+			function agregar(){
+				var elemento= document.createElement("li");
+				var texto= document.createTextNode("opcion 4");
+				elemento.appendChild(texto);
+				var lista= document.getElementById("lista");
+				lista.appendChild(elemento);
+			}
+
+		</script>
+
+	</body>
+</html>

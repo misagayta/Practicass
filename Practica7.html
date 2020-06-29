@@ -1,0 +1,42 @@
+<<!DOCTYPE html>
+<html lang="en">
+	<head >
+		<meta charset="utf-8">
+		<title>Imagen bordes</title>
+	</head>
+	<body>
+
+		<figure>
+			<img id="tupac" src="tupac.jpg" style="border: 5px solid orange;" title="probando bordes" width="500" height="400">
+		</figure>
+		<form name="formu">
+			
+
+			<input type="button" value="Cambiar a 20px de ancho de borde" onclick="setBorderWidth(20);"/>
+			<input type="button" value="Cambiar a 50px de ancho de borde" onclick="setBorderWidth(50);"/>
+			<input type="button" value="Cambiar a 70px de ancho de borde" onclick="setBorderWidth(70);"/>
+			<input type="button" value="Cambiar a 100px de ancho de borde" onclick="setBorderWidth(100);"/>
+			<input type="color" id="color" name="colorB" onclick="Cambiarcolor()">
+			
+
+		</form>
+
+		<script type="text/javascript">
+			function setBorderWidth(x){
+				document.getElementById('tupac').style.borderWidth=x+"px";
+				
+
+			}
+			function Cambiarcolor(tupac){
+				let color = document.getElementById('color').value;
+				document.getElementById('tupac').style.borderColor=color;
+
+
+			}
+
+			
+
+		</script>
+
+	</body>
+</html>

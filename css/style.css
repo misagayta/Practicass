@@ -70,4 +70,47 @@ nav{
   -webkit-box-shadow: 0px 5px 10px 10px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 5px 10px 10px rgba(0,0,0,0.75);
   box-shadow: 0px 5px 10px 10px rgba(0,0,0,0.75);
+
+
 }
+
+/*Practica 8*/
+#mensaje{
+            visibility: hidden; /*hiden= ocultar o no ser visible*/
+            min-width: 250px;   /*Minimo ancho es 205*/
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+        #mensaje.show{ 
+            visibility: visible; /*Se aplicara cuando le demos lcick*/
+            animation: fadein .5s fadeout .5s 2.5s; /*Animacion qeu se aplicara en 5s*/
+            -webkit-animation: fadein .5s fadeout .5s 2.5s; /*para que funcione en navegadores*/
+
+
+        }
+        /*keyframe= son pequellas secciones donde se insertan animaciones*/@keyframes fadein{
+            /*de donde a donde ira la animacion*/from{bottom: 0;opacity:0}
+            to{bottom: 30px;opacity: 1}
+            }
+
+        /*Para qu funcione tiene que usarse webkit*/@-webkit-keyframes fadein{
+                       from{bottom: 0;opacity:0}
+                        to{bottom: 30px;opacity:1}
+                    }  
+
+        /*Para es la salida para que desaparezca*/@keyframes fadeout{
+                       from{bottom: 30px;opacity:1}
+                        to{bottom: 0;opacity:0}
+                    }
+        @-webkit-keyframes fadeout{
+                       from{bottom: 30px;opacity:1}
+                        to{bottom: 0;opacity:0}
+                    }                                  
+

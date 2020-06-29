@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tarjetas de felicitacion</title>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+
+    <style >
+        body{
+            font-family: 'Yellowtail', cursive;
+            letter-spacing: 1.5px;
+            background-color: orange;
+            align-content: center;
+        }
+        #mensaje{
+            visibility: hidden; /*hiden= ocultar o no ser visible*/
+            min-width: 250px;   /*Minimo ancho es 205*/
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+        #mensaje.show{ 
+            visibility: visible; /*Se aplicara cuando le demos lcick*/
+            animation: fadein .5s fadeout .5s 2.5s; /*Animacion qeu se aplicara en 5s*/
+            -webkit-animation: fadein .5s fadeout .5s 2.5s; /*para que funcione en navegadores*/
+
+
+        }                                                                
+
+
+    </style>
+</head>
+
+<body>
+    <section >
+            <h1>Crea tu tarjeta de felicitacion</h1>
+            <h2><i class="fas fa-heart"></i>   Elige un tema</h2>
+
+            <<div class="selecciones">
+                <input type="radio" id="from1" name="tarjeta" value="Valentin" onclick="Cam1();">
+                <label for="target1">San Valentin</label>
+
+                <input type="radio" id="from2" name="tarjeta" value="Cumple" onclick="Cam2();">
+                <label for="target2">Cumpleaños</label>
+
+                <input type="radio" id="from3" name="tarjeta" value="Motivation" onclick="Cam3();">
+                <label for="target3">Motivación</label>
+              </div>
+            
+        
+            
+        <div class="imagenes">
+                <h2><i class="fas fa-camera"></i>Elige una imagen</h2>
+
+                <img  width="200" height="100vh" id="img1" name="primera" onclick="tomar('primera');">
+
+                <img  width="200" height="100vh" id="img2" name="segunda" onclick="tomar('segunda');">
+        </div>
+        
+
+        <h2><i class="fas fa-car"></i>Titulo</h2>
+
+        <form >
+            <input type="text" name="Title" placeholder="Titulo" id="Titulo" onchange="document.getElementById('t').innerHTML = Titulo = this.value"><br><br>
+            <input type="text" name="Subtitle" placeholder="Subtema" id="Subtema" onchange="document.getElementById('tS').innerHTML = Subtema = this.value"><br><br>
+            <input type="text" name="Name" placeholder="Nombre del remitente" id="Nombre" onchange="document.getElementById('tN').innerHTML = Nombre= this.value"><br><br>
+            <input type="text" name="Name" placeholder="Nombre de Autor" id="Nombre" onchange="document.getElementById('tP').innerHTML = Nombre= this.value"><br><br>
+       </form>
+
+    </section>
+
+
+    <section>
+        <button type="button" onclick="mostrar();"> Generar simon o k</button>
+
+        <div id="mensaje">
+            <h1 id="t"> </h1>
+            <h2 id="tS"></h2>
+
+            <img  class="fotoT" id="pan" align="center" width="400" height="300">
+
+            <p id="tN"></p>
+
+            <p id="tP"></p>
+        </div>
+        <p id="fecha" align="left" style="margin-left:8px;"></p>
+        <audio src="mp/CmonEverybody.mp3" controls="controls"></audio>
+
+          
+          
+        
+    </section>
+        
+
+
+    
+
+
+    <script type="text/javascript">
+        function mostrar(){
+            var x= document.getElementById('mensaje');
+            x.className="show";
+            
+
+        }
+
+        function tomar(num) {
+           imagen = document.images[num].src
+           grande = document.images["pan"]
+           grande.src = imagen
+        }
+
+        //imagenes 
+        function Cam1(){
+          document.getElementById("img1").src="IMG/sanv1.jpg";
+          document.getElementById("img2").src="IMG/sanv2.jpg";
+          
+          }
+          function Cam2(){
+            document.getElementById("img1").src="IMG/fcumple.jpg";
+            document.getElementById("img2").src="IMG/fcumple2.jpg";
+          }
+          function Cam3(){
+            document.getElementById("img1").src="IMG/motiva1.jpg";
+            document.getElementById("img2").src="IMG/motiva2.jpg";
+           
+          }
+
+
+        // fecha
+          var meses=new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+          var dias= new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado");
+          var f= new Date();
+            document.getElementById('fecha').innerHTML=+f.getDate()+"/"+ meses[f.getMonth()]+"/"+f.getFullYear();
+
+    </script>
+</body>
+</html>
